@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import {Button,Modal,ModalHeader,ModalBody,Form,FormGroup,Label,Input} from 'reactstrap'
 import { connect } from 'react-redux'
 import { addItem } from '../actions/itemActions';
-// import uuid from 'uuid';
 
 class ItemModel extends Component {
     state = {
@@ -43,7 +42,7 @@ class ItemModel extends Component {
                     style={{marginBottom: '2rem'}}
                     onClick={this.toggle}
                 >
-                    Add Item
+                    Добавить
                 </Button>
 
                 <Modal
@@ -53,25 +52,24 @@ class ItemModel extends Component {
                     <ModalHeader
                         toggle={this.toggle}
                     >
-                        Add To Shopping List
+                        Добавить в список покупок
                     </ModalHeader>
 
                     <ModalBody>
                         <Form onSubmit={this.onSubmit}>
                             <FormGroup>
-                                <Label for="item">Item</Label>
                                 <Input
                                     type="text"
                                     name="name"
                                     id="item"
-                                    placeholder="Add shopping item"
+                                    placeholder="Молоко..."
                                     onChange={this.onChange}
                                 />
                                 <Button
                                     color="dark"
                                     style={{marginTop: '2rem'}}
                                     block
-                                >Add Item</Button>
+                                >Добавить</Button>
                             </FormGroup>
                         </Form>
                     </ModalBody>
